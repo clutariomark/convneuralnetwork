@@ -1,2 +1,4 @@
-# convneuralnetwork
-A tensorflow implementation of CNN in the paper Peter Burkert, Felix Trier, Muhammad Zeshan Afzal, Andreas Dengel, and Marcus Liwicki. Dexpression: Deep convolutional neural network. arXiv preprint arXiv:1509.05371v2, 2015.
+# Facial Expression Recognition using CNN
+
+## Abstract
+In this paper, the CNN architecture proposed by \cite{burkert2015dexpression} was implemented using Tensorflow. The dataset used was the Extended Cohn Kanade Plus (CK+) which contains labeled emotion sequences. 10-fold cross validation was used to evaluate the CNN architecture. Aside from running the original model, dropout and batch normalization were also implemented. In total, four models were run (normal, dropout, batch normalization , dropout + batch normalization). Accuracies and runtimes of the models were then compared. Results showed that the original model has the highest test accuracy having a mean test accuracy over 10 folds of 99.38\%. The model that used batch normalization had the lowest test accuracy of 82.10\%. Comparing runtimes on the other hand, the dropout model clearly was faster than the other models (1430.9 mins/fold). The slowest model was the batch normalization model. The trained network was also tested on images obtained using a live webcam.
